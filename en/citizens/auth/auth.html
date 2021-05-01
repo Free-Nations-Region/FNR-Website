@@ -57,6 +57,27 @@
 <section class="page-title-header">
     <h1>Authentication</h1>
 </section>
+<section class="authForm">
+    <form>
+        <div class="form-group">
+            <label for="nationName">Nation Name</label>
+            <input type="text" class="form-control" id="nationName" placeholder="Testlandia">
+            <small id="nationNameHelp" class="form-text text-muted">Enter the name without the prefix. Example: Testlandia</small>
+        </div>
+        <div class="form-group">
+            <label for="verificationCode">Verification Code</label>
+            <input type="text" class="form-control" id="verificationCode">
+            <small id="verificationCodeHelp" class="form-text text-muted">To get your verification code, simply go here: <a href="https://www.nationstates.net/page=verify_login" target="_blank">https://www.nationstates.net/page=verify_login</a>.<br>
+            ⚠️ Stay logged into your nation!</small>
+        </div>
+        <div class="form-group">
+            <label for="discordID">Discord ID</label>
+            <input type="text" class="form-control" id="discordID" placeholder="Testlandia#1234">
+            <small id="discordIDHelp" class="form-text text-muted">Example: Testlandia#1234</small>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

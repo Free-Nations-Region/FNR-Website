@@ -1,6 +1,10 @@
 .page-title-header {
-    size: 100px;
+    display: flex;
+    height: 150px;
     text-align: center;
     font-weight: bold;
-    color: #369c6a;
+    background-color: #369c6a;
+    color: white;
+    align-items: center;
+    justify-content: center;
 }
