@@ -1,3 +1,5 @@
+// noinspection JSJQueryEfficiency
+
 async function verification()
 {
     // UI
