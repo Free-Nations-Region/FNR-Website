@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/FNR-Website/en/citizens/manage/manage.css">
     <link rel="stylesheet" href="/FNR-Website/css/common.css">
     <title>FNR</title>
 </head>
@@ -21,15 +22,16 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/FNR-Website/index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
+                <!--suppress XmlDuplicatedId -->
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Citizens
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/FNR-Website/en/citizens/verify/verify.html">Discord Verification</a>
-                    <a class="dropdown-item" href="/FNR-Website/en/citizens/manage/manage.html">Citizenship Management</a>
+                    <a class="dropdown-item" href="/FNR-Website/en/citizens/manage/manage.html">Citizenship Management<span class="sr-only">(current)</span></a>
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -53,8 +55,36 @@
     </button>
 </nav>
 
-<section class="dashboard">
+<section class="page-title-header">
+    <h1>Citizenship Management</h1>
+</section>
 
+<section class="cards">
+    <div class="cards-row">
+        <a href="#" class="cards-item">
+            <svg class="cards-content-svg" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#343A40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            <div class="card-content">
+                <p class="card-content-title">List</p>
+                <p class="card-content-description">See a list of all citizens.</p>
+            </div>
+        </a>
+
+        <a href="#" class="cards-item">
+            <svg class="cards-content-svg" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#343A40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+            <div class="card-content">
+                <p class="card-content-title">Check</p>
+                <p class="card-content-description">Check to see if a nation is a citizen.</p>
+            </div>
+        </a>
+
+        <a href="#" class="cards-item">
+            <svg class="cards-content-svg" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#343A40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>
+            <div class="card-content">
+                <p class="card-content-title">Management</p>
+                <p class="card-content-description">For government officials to manage citizens.</p>
+            </div>
+        </a>
+    </div>
 </section>
 
 <!-- Optional JavaScript -->
@@ -63,6 +93,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<script src="/FNR-Website/en/citizens/manage/manage.js"></script>
 <script src="/FNR-Website/js/main.js"></script>
 </body>
 </html>
