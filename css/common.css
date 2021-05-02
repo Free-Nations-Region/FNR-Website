@@ -47,6 +47,12 @@
     margin-right: 10px;
 }
 
+.cards-item:hover
+{
+    transform: translateY(-1.5px);
+    background: #d7ffe9;
+}
+
 .card-content
 {
     display: flex;

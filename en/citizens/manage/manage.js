@@ -21,7 +21,8 @@ function cardsUI(option)
 }
 
 
-function hideAllSections() {
+function hideAllSections()
+{
     manageSec.hide();
     listSec.hide();
     checkSec.hide();

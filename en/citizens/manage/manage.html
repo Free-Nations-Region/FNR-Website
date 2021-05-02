@@ -89,44 +89,46 @@
     </div>
 </section>
 
-<section class="errorHandling" style="display: none;">
-    <div class="alert alert-danger" role="alert" id="errorMessage">
-        Verification failed! Please try again. Ensure to read all instructions.
-    </div>
-    <div class="alert alert-success" role="alert" id="successMessage">
-        Success! Close this tab and head back to Discord.
-    </div>
-</section>
-
-<section class="listSection" style="display: none;">
-    list
-</section>
-
-<section class="checkSection" style="display: none;">
-    check
-</section>
-
-<section class="managementSection" style="display: none;">
-    <form id="inputForm">
-        <div class="form-group">
-            <label for="nationName">Nation Name</label>
-            <input type="text" class="form-control" id="nationName" placeholder="Testlandia">
-            <small id="nationNameHelp" class="form-text text-muted">Enter the name without the prefix. Example: Testlandia</small>
+<div class="content">
+    <section class="errorHandling" style="display: none;">
+        <div class="alert alert-danger" role="alert" id="errorMessage">
+            Verification failed! Please try again. Ensure to read all instructions.
         </div>
-        <div class="form-group">
-            <label for="verificationCode">Verification Code</label>
-            <input type="text" class="form-control" id="verificationCode">
-            <small id="verificationCodeHelp" class="form-text text-muted">To get your verification code, simply go here: <a href="https://www.nationstates.net/page=verify_login" target="_blank">https://www.nationstates.net/page=verify_login</a>.<br>
-                ⚠️Stay logged into your nation!</small>
+        <div class="alert alert-success" role="alert" id="successMessage">
+            Success! Close this tab and head back to Discord.
         </div>
-        <div class="form-group">
-            <label for="discordID">Discord ID</label>
-            <input type="text" class="form-control" id="discordID" placeholder="Testlandia#1234">
-        </div>
-        <br>
-        <button type="button" class="btn btn-primary" id="submitButton" onclick="verification(); return false">Submit</button>
-    </form>
-</section>
+    </section>
+
+    <section class="listSection" style="display: none;">
+        list
+    </section>
+
+    <section class="checkSection" style="display: none;">
+        check
+    </section>
+
+    <section class="managementSection" style="display: none;">
+        <form id="inputForm">
+            <div class="form-group">
+                <label for="nationName">Nation Name</label>
+                <input type="text" class="form-control" id="nationName" placeholder="Testlandia">
+                <small id="nationNameHelp" class="form-text text-muted">Enter the name without the prefix. Example: Testlandia</small>
+            </div>
+            <div class="form-group">
+                <label for="verificationCode">Verification Code</label>
+                <input type="text" class="form-control" id="verificationCode">
+                <small id="verificationCodeHelp" class="form-text text-muted">To get your verification code, simply go here: <a href="https://www.nationstates.net/page=verify_login" target="_blank">https://www.nationstates.net/page=verify_login</a>.<br>
+                    ⚠️Stay logged into your nation!</small>
+            </div>
+            <div class="form-group">
+                <label for="discordID">Discord ID</label>
+                <input type="text" class="form-control" id="discordID" placeholder="Testlandia#1234">
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary" id="submitButton" onclick="verification(); return false">Submit</button>
+        </form>
+    </section>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

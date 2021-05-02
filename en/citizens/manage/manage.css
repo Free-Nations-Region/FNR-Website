@@ -1,0 +1,10 @@
+.content
+{
+    margin: 15px 10px;
+}
+
+.managementSection
+{
+    display: flex;
+    justify-content: center;
+}

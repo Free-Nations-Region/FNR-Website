@@ -2,7 +2,8 @@
  * If logged in, changes user interface is adapted.
  * If failed, nothing happens and event is logged.
  */
-$(document).ready(function () {
+$(document).ready(function ()
+{
     try
     {
         if(localStorage.userNation.length > 1)
