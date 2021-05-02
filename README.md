@@ -1,7 +1,7 @@
 # FNR Website
 🛑 **Warning**: Website is still under construction!
 ## About
-A website that is created and maintained by [heaveria](https://www.nationstates.net/nation=heaveria) &
+A website that is created and maintained by [Heaveria](https://www.nationstates.net/nation=heaveria) &
 [Tigerania](https://www.nationstates.net/nation=tigerania) (Drehtisch) for various 
 [NationStates](https://www.nationstates.net) functions. 
 While it will service many functions for [FNR](https://www.nationstates.net/region=the_free_nations_region),
@@ -24,7 +24,7 @@ We maintain a transparent open budget via the Open Collective platform. If you l
 [like to help us](https://opencollective.com/fnr) out, we'd appreciate anything 💖.
 
 ## Support
-You may send a telegram to [heaveria](https://www.nationstates.net/nation=heaveria) &
+You may send a telegram to [Heaveria](https://www.nationstates.net/nation=heaveria) &
 [Tigerania](https://www.nationstates.net/nation=tigerania) or simply contact us via Discord:
 - Heaveria#6413
 - Drehtisch#5680
