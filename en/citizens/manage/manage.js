@@ -3,6 +3,7 @@ let listSec = $('.listSection');
 let checkSec = $('.checkSection');
 
 $(document).ready(function () {
+    $('#listTable').DataTable();
     populateListTable();
 })
 
