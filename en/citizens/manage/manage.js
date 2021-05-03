@@ -4,6 +4,7 @@ let checkSec = $('.checkSection');
 
 $(document).ready(function () {
     populateListTable();
+    // DataTables library. Table must be populated before calling this function!
     $('#listTable').DataTable();
 })
 
