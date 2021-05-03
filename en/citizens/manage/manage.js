@@ -3,8 +3,8 @@ let listSec = $('.listSection');
 let checkSec = $('.checkSection');
 
 $(document).ready(function () {
-    $('#listTable').DataTable();
     populateListTable();
+    $('#listTable').DataTable();
 })
 
 // Controls the UI upon clicking the cards.
