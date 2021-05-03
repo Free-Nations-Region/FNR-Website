@@ -12,6 +12,10 @@
 
     <title>FNR</title>
     <link rel="icon" type="image/png" href="/FNR-Website/assets/favicon.ico"/>
+    <style type="text/css">
+        .table-responsive {
+        }
+    </style>
 </head>
 <body>
 
@@ -99,8 +103,21 @@
         </div>
     </section>
 
-    <section class="listSection" style="display: none;">
-        list
+    <section class="table-responsive listSection" style="display: none;">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nation</th>
+                <th scope="col">Type</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- To be populated via JavaScript -->
+            </tbody>
+        </table>
     </section>
 
     <section class="checkSection" style="display: none;">
