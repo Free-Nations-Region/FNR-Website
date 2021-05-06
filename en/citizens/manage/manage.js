@@ -1,39 +1,24 @@
-let manageSec = $('.managementSection');
-let listSec = $('.listSection');
-let checkSec = $('.checkSection');
+let editSec = $('.editSection');
+let viewOnlySec = $('.viewOnlySection');
 
-$(document).ready(function () {
-    populateListTable();
-    // DataTables library. Table must be populated before calling this function!
-    $('#listTable').DataTable();
-})
-
-// Controls the UI upon clicking the cards.
-function cardsUI(option)
+// onLoad via jQuery
+$(document).ready(function ()
 {
-    switch(option)
+    // Based on user permissions, shows a editable or viewOnly table.
+    switch(1)
     {
-        case 'list':
-            hideAllSections();
-            listSec.show();
+        case 0:
+            viewOnlySec.show();
+            populateListTable();
+            // DataTables library. Table must be populated before calling this function!
+            $('#viewOnlyTable').DataTable();
             break;
-        case 'check':
-            hideAllSections();
-            checkSec.show();
-            break;
-        case 'manage':
-            hideAllSections();
-            manageSec.show();
+        case 1:
+            editSec.show();
+            populateListTable();
+            $('#editTable').DataTable();
     }
-}
-
-// To avoid repetitive code in the cardsUI(option) function.
-function hideAllSections()
-{
-    manageSec.hide();
-    listSec.hide();
-    checkSec.hide();
-}
+})
 
 // Can populate the table in the list section.
 function populateListTable()
@@ -47,16 +32,35 @@ function populateListTable()
         {nation: "Sparsdan", type: "WA", duration: "10 Days", status: "Active"}
     ]
 
-    // Each row is added by injecting HTML into the tbody of the table.
-    let table = document.querySelector('tbody');
+    // Each row is added by injecting HTML into the tbody of the viewOnlyTable.
+    let viewOnlyTable = document.querySelectorAll('tbody')[0];
     for (let i = 0; i < info.length; i++)
     {
-        table.insertRow(i).outerHTML =
+        viewOnlyTable.insertRow(i).outerHTML =
             `<tr>
                 <th scope="row">${i.toString()}</th>
                 <td>${info[i].nation}</td>
                 <td>${info[i].type}</td>
                 <td>${info[i].duration}</td>
+                <td>${info[i].status}</td>
+             </tr>`;
+    }
+
+    // Each row is added by injecting HTML into the tbody of the viewOnlyTable.
+    let editTable = document.querySelectorAll('tbody')[1];
+    for (let i = 0; i < info.length; i++)
+    {
+        editTable.insertRow(i).outerHTML =
+            `<tr>
+                <th scope="row">${i.toString()}</th>
+                <td contenteditable="false">
+                    <i class="fas fa-trash-alt" id="fontIcon" style="font-size: 24px;"></i> 
+                    <i class="fas fa-save" id="saveIcon" style="font-size: 24px; color: grey;"></i>
+                    <i class="fas fa-times-circle" id="cancelIcon" style="font-size: 24px; color: grey;"></i>
+                 </td>
+                <td>${info[i].nation}</td>
+                <td>${info[i].type}</td>
+                <td contenteditable="false">${info[i].duration}</td>
                 <td>${info[i].status}</td>
              </tr>`;
     }

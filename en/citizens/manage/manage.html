@@ -11,13 +11,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
     <link rel="stylesheet" href="/FNR-Website/en/citizens/manage/manage.css">
     <link rel="stylesheet" href="/FNR-Website/css/common.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/62ddd7ec1f.js" crossorigin="anonymous"></script>
 
     <title>FNR</title>
     <link rel="icon" type="image/png" href="/FNR-Website/assets/favicon.ico"/>
-    <style type="text/css">
-        .table-responsive {
-        }
-    </style>
 </head>
 <body>
 
@@ -67,34 +65,6 @@
     <h1>Citizenship Management</h1>
 </section>
 
-<section class="cards">
-    <div class="cards-row">
-        <a class="cards-item" onclick="cardsUI('list')">
-            <svg class="cards-content-svg" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#343A40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
-            <div class="card-content">
-                <p class="card-content-title">List</p>
-                <p class="card-content-description">Everybody can publicly see a list of all citizens in FNR.</p>
-            </div>
-        </a>
-
-        <a class="cards-item" onclick="cardsUI('check')">
-            <svg class="cards-content-svg" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#343A40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
-            <div class="card-content">
-                <p class="card-content-title">Check</p>
-                <p class="card-content-description">Everybody can check to see if a nation is a citizen.</p>
-            </div>
-        </a>
-
-        <a class="cards-item" onclick="cardsUI('manage')">
-            <svg class="cards-content-svg" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#343A40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg>
-            <div class="card-content">
-                <p class="card-content-title">Management</p>
-                <p class="card-content-description">For government officials to manage citizens.</p>
-            </div>
-        </a>
-    </div>
-</section>
-
 <div class="content">
     <section class="errorHandling" style="display: none;">
         <div class="alert alert-danger" role="alert" id="errorMessage">
@@ -105,8 +75,8 @@
         </div>
     </section>
 
-    <section class="table-responsive listSection" style="display: none;">
-        <table class="table table-striped" id="listTable">
+    <section class="table-responsive viewOnlySection" style="display: none;">
+        <table class="table table-striped" id="viewOnlyTable">
             <thead>
             <tr>
                 <th scope="col">#</th>
@@ -122,30 +92,22 @@
         </table>
     </section>
 
-    <section class="checkSection" style="display: none;">
-        check
-    </section>
-
-    <section class="managementSection" style="display: none;">
-        <form id="inputForm">
-            <div class="form-group">
-                <label for="nationName">Nation Name</label>
-                <input type="text" class="form-control" id="nationName" placeholder="Testlandia">
-                <small id="nationNameHelp" class="form-text text-muted">Enter the name without the prefix. Example: Testlandia</small>
-            </div>
-            <div class="form-group">
-                <label for="verificationCode">Verification Code</label>
-                <input type="text" class="form-control" id="verificationCode">
-                <small id="verificationCodeHelp" class="form-text text-muted">To get your verification code, simply go here: <a href="https://www.nationstates.net/page=verify_login" target="_blank">https://www.nationstates.net/page=verify_login</a>.<br>
-                    ⚠️Stay logged into your nation!</small>
-            </div>
-            <div class="form-group">
-                <label for="discordID">Discord ID</label>
-                <input type="text" class="form-control" id="discordID" placeholder="Testlandia#1234">
-            </div>
-            <br>
-            <button type="button" class="btn btn-primary" id="submitButton" onclick="verification(); return false">Submit</button>
-        </form>
+    <section class="table-responsive editSection" style="display: none;">
+        <table class="table table-striped" id="editTable" contenteditable="true">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" contenteditable="false">Tools</th>
+                <th scope="col">Nation</th>
+                <th scope="col">Type</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Status</th>
+            </tr>
+            </thead>
+            <tbody id="manageTableTbody">
+            <!-- To be populated via JavaScript -->
+            </tbody>
+        </table>
     </section>
 </div>
 
