@@ -10,6 +10,8 @@
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Master Shared CSS -->
     <link rel="stylesheet" href="/FNR-Website/css/common.css">
+    <!-- Dispatch Backup CSS -->
+    <link rel="stylesheet" href="/FNR-Website/en/tools/backup.css">
 
     <title>FNR</title>
     <link rel="icon" type="image/png" href="/FNR-Website/assets/favicon.ico"/>
@@ -64,7 +66,31 @@
 </nav>
 
 <section class="page-title-header">
-    <h1>Dispatch Backup</h1>
+    <h1>Dispatch Backup Tool</h1>
+</section>
+
+<section class="errorHandling" style="display: none;">
+    <div class="alert alert-danger" role="alert" id="errorMessage">
+        Error text goes here.
+    </div>
+</section>
+
+<section class="inputForm">
+    <form>
+        <div class="form-group">
+            <label for="nationName">Nation Name</label>
+            <input type="text" class="form-control" id="nationName" placeholder="Testlandia">
+            <small id="nationNameHelp" class="form-text text-muted">Enter the name without the prefix. Example: Testlandia</small>
+        </div>
+        <div class="form-group">
+            <label for="verificationCode">Verification Code</label>
+            <input type="text" class="form-control" id="verificationCode">
+            <small id="verificationCodeHelp" class="form-text text-muted">To get your verification code, simply go here: <a href="https://www.nationstates.net/page=verify_login" target="_blank">https://www.nationstates.net/page=verify_login</a>.<br>
+                ⚠️ Stay logged into your nation!</small>
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" id="submitButton" onclick="loginSubmit(); return false">Submit</button>
+    </form>
 </section>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -82,6 +108,8 @@
 </script>
 
 <script src="/FNR-Website/js/main.js">
+</script>
+<script src="/FNR-Website/en/tools/backup.js">
 </script>
 </body>
 </html>
