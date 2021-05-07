@@ -76,3 +76,15 @@
     color: #343A40;
     text-align: center;
 }
+
+.cards-section-title
+{
+    display: flex;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #369c6a;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
