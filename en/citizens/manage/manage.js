@@ -4,7 +4,11 @@ let viewOnlySec = $('.viewOnlySection');
 // onLoad via jQuery
 $(document).ready(function ()
 {
-    // Based on user permissions, shows a editable or viewOnly table.
+    /* Based on user permissions, shows a editable or viewOnly table.
+     * 0 == False
+     * 1 == True
+     * Permissions method will change and be based on tokens.
+     */
     switch(1)
     {
         case 0:

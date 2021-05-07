@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
-    <link rel="stylesheet" href="/FNR-Website/en/citizens/manage/manage.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Master Shared CSS -->
     <link rel="stylesheet" href="/FNR-Website/css/common.css">
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/62ddd7ec1f.js" crossorigin="anonymous"></script>
 
     <title>FNR</title>
     <link rel="icon" type="image/png" href="/FNR-Website/assets/favicon.ico"/>
@@ -67,66 +64,24 @@
 </nav>
 
 <section class="page-title-header">
-    <h1>Citizenship Management</h1>
+    <h1>Dispatch Backup</h1>
 </section>
 
-<div class="content">
-    <section class="errorHandling" style="display: none;">
-        <div class="alert alert-danger" role="alert" id="errorMessage">
-            Verification failed! Please try again. Ensure to read all instructions.
-        </div>
-        <div class="alert alert-success" role="alert" id="successMessage">
-            Success! Close this tab and head back to Discord.
-        </div>
-    </section>
-
-    <section class="table-responsive viewOnlySection" style="display: none;">
-        <table class="table table-striped" id="viewOnlyTable">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nation</th>
-                <th scope="col">Type</th>
-                <th scope="col">Duration</th>
-                <th scope="col">Status</th>
-            </tr>
-            </thead>
-            <tbody>
-            <!-- To be populated via JavaScript -->
-            </tbody>
-        </table>
-    </section>
-
-    <section class="table-responsive editSection" style="display: none;">
-        <table class="table table-striped" id="editTable" contenteditable="true">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col" contenteditable="false">Tools</th>
-                <th scope="col">Nation</th>
-                <th scope="col">Type</th>
-                <th scope="col">Duration</th>
-                <th scope="col">Status</th>
-            </tr>
-            </thead>
-            <tbody id="manageTableTbody">
-            <!-- To be populated via JavaScript -->
-            </tbody>
-        </table>
-    </section>
-</div>
-
-<!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- Data Tables -->
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous">
+</script>
 
-
-
-<script src="/FNR-Website/en/citizens/manage/manage.js"></script>
-<script src="/FNR-Website/js/main.js"></script>
+<script src="/FNR-Website/js/main.js">
+</script>
 </body>
 </html>

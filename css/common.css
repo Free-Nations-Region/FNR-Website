@@ -51,6 +51,7 @@
 {
     transform: translateY(-1.5px);
     background: #d7ffe9;
+    text-decoration: none;
 }
 
 .card-content
