@@ -13,7 +13,7 @@ if (redirectUrl != null)
 
 function loginSubmit()
 {
-    // Gets the parameter in the URL. Returns null if empty.
+    let response = true;
 
     // Visual Feedback
     let button = document.getElementById('submitButton');
