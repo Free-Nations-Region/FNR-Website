@@ -25,6 +25,7 @@ In order to deliver on our pledge of not collecting any personal information (to
 ## Dispatch Backup
 This tool is executed enitely front-end and allows you to backup all of the dispatches of any nation. This whole process is also ratelimited to comply with NationStates API Rules. The ratelimit can also be manually increases by the user. The results of the backup can either by copied to the clipboard or downloaded as a .txt file. You must login to use this tool in order for us to properly comply with all NationStates API rules.
 
+# Miscallaneous
 ## Donate
 All of this development takes a lot of time, skill, and sweat. In addition, we must also maintain server costs.
 We maintain a transparent open budget via the Open Collective platform. If you like our tools and would 
