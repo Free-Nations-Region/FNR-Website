@@ -65,7 +65,14 @@ async function backup()
     // 2. Get/Set Values
     let uAgent = localStorage.userNation;
     let nName = $('#nationName').val();
-    let throttlems = throttle.val();
+    let throttlems;
+    if (throttle.val() < 650)
+    {
+        throttlems = 650;
+    } else
+    {
+        throttlems = throttle.val();
+    }
     let url = `https://www.nationstates.net/cgi-bin/api.cgi`;
     let uAgentParam = `userAgent=Script%20by%20Heaveria.%20In%20use%20by%20${uAgent}`;
 
