@@ -18,6 +18,17 @@ $(document).ready(function ()
     }
 })
 
+// Copy to Clipboard Function
+let clipboardBtn = $('#clipboardBtn');
+clipboardBtn.click(function() {
+    let copyText = document.querySelector("#resultBox");
+    copyText.select();
+    document.execCommand("copy");
+    console.log(`Text copied to clipboard.`);
+    clipboardBtn.popover('show');
+    setTimeout(function(){ clipboardBtn.popover('hide');; }, 3000);
+})
+
 // Dispatch Backup Tool
 async function backup()
 {
@@ -61,17 +72,17 @@ async function backup()
             });
         await sleep(throttle); // Rate limit
 
-        // 5. Update visual feedback
+        // 6. Update visual feedback
         progressBar.show();
 
-        // 6. Get text for each dispatch.
+        // 7. Get text for each dispatch.
         let textList = [];
         for (let i in dispatchList)
         {
-            // 7. Update visual feedback
+            // 8. Update visual feedback
             $('#progressMessage').text(`Getting dispatch ${parseInt(i)+1} of ${dispatchList.length}`);
 
-            // 8. Execute Request
+            // 9. Execute Request
             await fetch(`${url}?${uAgentParam}&q=dispatch;dispatchid=${dispatchList[i]}`)
                 .then(res => {
                     if (res.status === 404) {
@@ -84,16 +95,30 @@ async function backup()
                     textList.push(data.getElementsByTagName("TEXT")[0].innerHTML);
                 });
 
-            // 9. Update visual feedback
+            // 10. Update visual feedback
             let percentProgress = Math.ceil((i/(dispatchList.length-1))*100)
             progressBarPercent.attr('style',`width: ${percentProgress}%`);
             progressBarPercent.text(`${percentProgress}%`)
 
             await sleep(throttle); // Rate limit
+        }
 
+        // 11. Take raw text in textList and format it properly.
+        let outputText = []
+        for (let i in textList)
+        {
+            outputText.push(`Dispatch ID: ${dispatchList[i]}\n${textList[i]
+                .replace('<![CDATA[', '')
+                .replace(']]>','')} 
+                ~~~~ END ~~~\n`);
 
         }
         console.log(textList);
+        console.log(outputText)
+        // 12. Modify HTML to show results.
+        $('.inputForm').hide();
+        $('.resultSec').show();
+        $('#resultBox').text(outputText.join('<b>'))
     }
     catch(err)
     {

@@ -25,3 +25,17 @@
     margin-right: 10px;
     margin-left: 10px;
 }
+
+.resultSec
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultDiv
+{
+    max-width: 400px;
+    width: calc(100% - 10px);
+}
