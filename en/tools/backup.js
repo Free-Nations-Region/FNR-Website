@@ -29,6 +29,19 @@ clipboardBtn.click(function() {
     setTimeout(function(){ clipboardBtn.popover('hide');; }, 3000);
 })
 
+// Download function
+function download()
+{
+    let element = document.createElement('a');
+    element.setAttribute('href',
+        'data:text/plain;charset=utf-8,' + encodeURIComponent($('#resultBox').text()));
+    element.setAttribute('download', `${$('#nationName').val()}-backup.txt`);
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+}
+
 // Dispatch Backup Tool
 async function backup()
 {
