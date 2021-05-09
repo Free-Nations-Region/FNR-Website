@@ -19,7 +19,7 @@ Client and server never store any personally identifiable information, and our l
 NS Verification API.
 
 ## Login with Privacy
-In ordee to deliver on our pledge of not collecting any personal information (to include passwords,) our login system is completely based on the NationStates Verification API. This means that you login to the NationStates website (your trusted source), give a verification code they give you, and then we ask NationStates seevers if you are who you claim to be. Easy and more secure with privacy in mind.
+In order to deliver on our pledge of not collecting any personal information (to include passwords,) our login system is completely based on the NationStates Verification API. This means that you login to the NationStates website (your trusted source), give us verification code that NS gave you, and then we ask NationStates servers if you are who you claim to be. Easy and more secure with privacy in mind.
 
 # Features for Everyone
 ## Dispatch Backup
