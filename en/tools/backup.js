@@ -18,6 +18,15 @@ $(document).ready(function ()
     }
 })
 
+// On event that throttle is changed, check if lower than 650 ms.
+let throttle = $('#throttle');
+throttle.change(function() {
+    if (throttle.val() < 650)
+    {
+        throttle.val(650);
+    }
+})
+
 // Copy to Clipboard Function
 let clipboardBtn = $('#clipboardBtn');
 clipboardBtn.click(function() {
@@ -56,7 +65,7 @@ async function backup()
     // 2. Get/Set Values
     let uAgent = localStorage.userNation;
     let nName = $('#nationName').val();
-    let throttle = $('#throttle').val();
+    let throttlems = throttle.val();
     let url = `https://www.nationstates.net/cgi-bin/api.cgi`;
     let uAgentParam = `userAgent=Script%20by%20Heaveria.%20In%20use%20by%20${uAgent}`;
 
@@ -83,7 +92,7 @@ async function backup()
                    dispatchList.push(rawList[i].attributes[0].value);
                 }
             });
-        await sleep(throttle); // Rate limit
+        await sleep(throttlems); // Rate limit
 
         // 6. Update visual feedback
         progressBar.show();
@@ -113,7 +122,7 @@ async function backup()
             progressBarPercent.attr('style',`width: ${percentProgress}%`);
             progressBarPercent.text(`${percentProgress}%`)
 
-            await sleep(throttle); // Rate limit
+            await sleep(throttlems); // Rate limit
         }
 
         // 11. Take raw text in textList and format it properly.
