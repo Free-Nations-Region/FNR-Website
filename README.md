@@ -18,6 +18,13 @@ will be executed through server-end code via the FNR API. Nonetheless, we plan t
 Client and server never store any personally identifiable information, and our login-system relies solely on the
 NS Verification API.
 
+# Privacy-friendly Login
+In ordee to deliver on our pledge of not collecting any personal information (to include passwords,) our login system is completely based on the NationStates Verification API. This means that you login to the NationStates website (your trusted source), give a verification code they give you, and then we ask NationStates seevers if you are who you claim to be. Easy and more secure with privacy in mind.
+
+# Features for Everyone
+## Dispatch Backup
+This tool is executed enitely front-end and allows you to backup all of the dispatches of any nation. This whole process is also ratelimited to comply with NationStates API Rules. The ratelimit can also be manually increases by the user. The results of the backup can either by copied to the clipboard or downloaded as a .txt file. You must login to use this tool in order for us to properly comply with all NationStates API rules.
+
 ## Donate
 All of this development takes a lot of time, skill, and sweat. In addition, we must also maintain server costs.
 We maintain a transparent open budget via the Open Collective platform. If you like our tools and would 
