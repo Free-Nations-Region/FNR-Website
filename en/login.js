@@ -57,7 +57,14 @@ function loginSubmit()
     }
 }
 
-async function getNewJWT()
+async function loginJWT()
+{
+    let jwt = await validateNewJWT();
+    localStorage.setItem('user', JSON.stringify(jwt));
+}
+
+
+async function validateNewJWT()
 {
     // 1. Setup
     let url = `https://api.the-fnr.com`;
