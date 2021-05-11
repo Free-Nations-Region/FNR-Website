@@ -33,7 +33,8 @@ function loginSubmit()
                 case null:
                     return window.location.replace('/FNR-Website/index.html');
                 case dispatch:
-                    return window.location.replace('/FNR-Website/en/tools/dispatch.html');
+                    window.location.replace('/FNR-Website/en/tools/dispatch.html');
+                    break;
             }
         case 400:
             /* Reset values & show error message(s).
