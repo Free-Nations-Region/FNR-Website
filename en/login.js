@@ -20,6 +20,7 @@ function loginSubmit()
     button.innerHTML = 'Please wait...';
     button.focus();
     console.log('Authenticating...')
+    
     // Login Logic
     switch(response)
     {
@@ -31,8 +32,8 @@ function loginSubmit()
             {
                 case null:
                     return window.location.replace('/FNR-Website/index.html');
-                default:
-                    return window.location.replace(redirectUrl);
+                case dispatch
+                    return window.location.replace('/FNR-Website/en/tools/dispatch.html');
             }
         case 400:
             /* Reset values & show error message(s).
