@@ -14,7 +14,7 @@ $(document).ready(function ()
     catch(err)
     {
         // Redirects user to login page. Adds a dynamic redirect parameter which can be read by the login.js script.
-        window.location.replace(`/FNR-Website/en/login.html?redirect=${window.location.href}`);
+        window.location.replace(`/FNR-Website/en/login.html?redirect=dispatch`);
     }
 })
 
