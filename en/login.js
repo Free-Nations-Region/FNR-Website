@@ -32,7 +32,7 @@ function loginSubmit()
             {
                 case null:
                     return window.location.replace('/FNR-Website/index.html');
-                case dispatch:
+                case 'dispatch':
                     return window.location.replace('/FNR-Website/en/tools/dispatch.html');
             }
         case 400:
