@@ -2,22 +2,21 @@
 .page-title-header
 {
     display: flex;
+        align-items: center;
+        justify-content: center;
     height: 150px;
     text-align: center;
     font-weight: bold;
     background-color: #369c6a;
     color: white;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Template for cards. */
 .cards
 {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-
+        flex-flow: row wrap;
+        justify-content: center;
     background-color: #379c6a;
     padding-bottom: 2em;
 }
@@ -25,17 +24,17 @@
 .cards-row
 {
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
 }
 
 .cards-item
 {
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
     background-color: #ffffff;
     border-radius: 4px;
     filter: drop-shadow(2px 2px 4px #00000040);
@@ -43,8 +42,8 @@
     width: 250px;
     padding: 1.15em 1.5em;
     margin-top: .8em;
-    margin-left: 10px;
-    margin-right: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
 }
 
 .cards-item:hover
@@ -57,8 +56,8 @@
 .card-content
 {
     display: flex;
-    flex-flow: column;
-    align-items: center;
+        flex-flow: column;
+        align-items: center;
 }
 
 .card-content-title, .card-content-title:hover, .card-content-title a:hover
@@ -68,7 +67,6 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
-
 }
 
 .card-content-description, .card-content-description:hover
@@ -81,11 +79,11 @@
 .cards-section-title
 {
     display: flex;
+        align-items: center;
+        justify-content: center;
     height: 30px;
     text-align: center;
     font-weight: bold;
     background-color: #369c6a;
     color: white;
-    align-items: center;
-    justify-content: center;
 }

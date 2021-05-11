@@ -2,40 +2,40 @@
 {
     margin: 15px 10px;
     display: flex;
-    justify-content: center;
+        justify-content: center;
 }
 
 .progressAlert
 {
     margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
     display: flex;
-    justify-content: center;
+        justify-content: center;
 }
 .progressBar
 {
     display: flex;
-    justify-content: center;
+        justify-content: center;
 }
 .progress
 {
     max-width: 400px;
-    width: 400px;
+        width: 400px;
     margin-right: 10px;
-    margin-left: 10px;
+        margin-left: 10px;
 }
 
 .resultSec
 {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+        flex-direction: column;
+        justify-content: center;
     align-items: center;
 }
 
 .resultDiv
 {
     max-width: 400px;
-    width: calc(100% - 10px);
+        width: calc(100% - 10px);
 }

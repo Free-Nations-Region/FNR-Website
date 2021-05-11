@@ -1,14 +1,14 @@
 .authForm {
     margin: 15px 10px;
     display: flex;
-    justify-content: center;
+        justify-content: center;
 }
 
 
 .errorHandling {
     margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
     display: flex;
-    justify-content: center;
+        justify-content: center;
 }
