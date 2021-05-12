@@ -6,10 +6,11 @@ $(document).ready(function ()
 {
     try
     {
-        if(localStorage.userNation.length > 1)
+        let jwt = JSON.parse(localStorage.getItem('user'));
+        if(jwt.isValid === true)
         {
-            console.log(`${localStorage.userNation} is logged in.`)
-            $('#loginBtn').text(localStorage.userNation);
+            console.log(`${jwt.nation} is logged in.`)
+            $('#loginBtn').text(jwt.nation);
         }
     }
     catch(err)

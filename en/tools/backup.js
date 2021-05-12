@@ -4,11 +4,12 @@
  */
 $(document).ready(function ()
 {
+    let jwt = JSON.parse(localStorage.getItem('user'));
     try
     {
-        if(localStorage.userNation.length > 1)
+        if(jwt.isValid === true)
         {
-            console.log(`${localStorage.userNation} is authorized to use the backup tool.`)
+            console.log(`${jwt.nation} is authorized to use the backup tool.`)
         }
     }
     catch(err)

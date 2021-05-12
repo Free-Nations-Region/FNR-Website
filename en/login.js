@@ -11,30 +11,28 @@ if (redirectUrl != null)
 }
 
 
-function loginSubmit()
-{
-    let response = true;
-
+async function loginSubmit() {
     // Visual Feedback
     let button = document.getElementById('submitButton');
     button.innerHTML = 'Please wait...';
     button.focus();
     console.log('Authenticating...')
-    
+
+    // Get token from server-side API.
+    let jwt = await validateNewJWT();
+    localStorage.setItem('user', JSON.stringify(jwt));
+    jwt = JSON.parse(localStorage.getItem('user'));
+
     // Login Logic
-    switch(response)
-    {
+    switch (jwt.isValid) {
         case true:
-            // TBD: Set JWT/Cookie
-            localStorage.userNation = "Heaveria";
-            // Uses aforementioned URL parameters to redirect to parameter or go home if null.
-            switch (redirectUrl)
-            {
+            switch (redirectUrl) {
                 case null:
                     return window.location.replace('/FNR-Website/index.html');
                 case 'dispatch':
                     return window.location.replace('/FNR-Website/en/tools/dispatch.html');
             }
+            break;
         case 400:
             /* Reset values & show error message(s).
              * Incorrect nation name.
@@ -56,12 +54,6 @@ function loginSubmit()
             console.log(`Login failed. Error: ${response}`)
             break;
     }
-}
-
-async function loginJWT()
-{
-    let jwt = await validateNewJWT();
-    localStorage.setItem('user', JSON.stringify(jwt));
 }
 
 
@@ -101,8 +93,9 @@ async function validateNewJWT()
     let headerObj = KJUR.jws.JWS.readSafeJSONString(b64utoutf8(token.split(".")[0]));
     let payloadObj = KJUR.jws.JWS.readSafeJSONString(b64utoutf8(token.split(".")[1]));
     return {
+        'nation': $('#nationName').val(),
         'token': token,
         'isValid': isValid,
         'payload': payloadObj
-    }
+    };
 }
