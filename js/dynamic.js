@@ -1,8 +1,9 @@
 // Navbar
 document.querySelector('body').innerHTML = `
 <!-- Navigation Bar -->
+<!--suppress ALL -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="./index.html/">
         <img src="./assets/logo.png" width="30" height="33" class="d-inline-block align-top" alt=""
              loading="lazy"> FNR
     </a>
